@@ -22,7 +22,7 @@ def setup(self):
         try: f = open(fn, 'w')
         except OSError: pass
         else:
-            f.write('Welcome to #sahana-eden, %s!\nptressel')
+            f.write('Welcome to #sahana-eden, %s!')
             f.close()
 
     try:
