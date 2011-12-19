@@ -2,6 +2,7 @@
 """
 greet.py - Phenny Sahana-Eden Greet Module
 (c) 2011 Nolan Lum <nol888@gmail.com>
+Modified by: Jacob Warring Eytle
 """
 
 import os, re
@@ -42,9 +43,9 @@ def f_join(phenny, input):
     cur = phenny.g_conn.cursor()
     cur.execute("SELECT name FROM users WHERE name = ?", (input.nick,))
     if not cur.fetchone():
-        phenny.msg(input.sender, phenny.g_greet % (input.nick))
+        phenny.notice(input.nick, phenny.g_greet % (input.nick))
         if phenny.g_pingList:
-            phenny.msg(input.sender, ', '.join(phenny.g_pingList) + ': ping');
+            phenny.notice(input.sender, ', '.join(phenny.g_pingList) + ': ping');
         cur.execute("INSERT INTO users VALUES (?)", (input.nick,))
         phenny.g_conn.commit()
 
