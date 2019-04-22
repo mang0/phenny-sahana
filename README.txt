@@ -27,4 +27,4 @@ http://inamidst.com/phenny/
 Enjoy!
 
 -- 
-Jacob Warring Eytle, http://www.fruitbowlstudios.blogspot.com/p/about-me.html
+Jacob
